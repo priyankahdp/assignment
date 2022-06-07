@@ -6,3 +6,7 @@ Endpoint 1
 
 Endpoint 2
 {{server}}/worldline/api/perfectnumber/6
+
+
+clone the project & run the below command in the terminal
+mvn clean install spring-boot:run
