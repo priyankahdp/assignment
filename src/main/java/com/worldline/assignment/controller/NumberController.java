@@ -22,6 +22,9 @@ public class NumberController {
 	@GetMapping("/perfectnumber/{perfectNumber}")
 	public ResponseEntity isPerfectNumber(@PathVariable Integer perfectNumber) {
 		try {
+			if (perfectNumber == 0) {
+				return new ResponseEntity<>(false, HttpStatus.OK);
+			}
 			Boolean isPerfectNumber = numberService.isPerfectNumber(perfectNumber);
 			return new ResponseEntity<>(isPerfectNumber, HttpStatus.OK);
 		} catch (Exception e) {
